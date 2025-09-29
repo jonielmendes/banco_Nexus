@@ -1,0 +1,488 @@
+:root{
+  --nexus-navy: #0A2647;
+  --nexus-medium: #144272;
+  --nexus-light-blue: #2C74B3;
+  --nexus-light-gray: #E5E5E5;
+  --nexus-white: #FFFFFF;
+  --nexus-dark: #1A1A1A;
+  --nexus-charcoal: #2D2D2D;
+  --nexus-silver: #F8F9FA;
+  --nexus-gold: #FFD700;
+  --ink: #0A2647;
+  --muted: #6B7280;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family:'Inter',system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--ink);
+  line-height:1.6;
+  background:var(--nexus-silver);
+}
+
+.text-nexus{color:var(--nexus-navy)!important}
+.text-nexus-medium{color:var(--nexus-medium)!important}
+.text-nexus-light{color:var(--nexus-light-blue)!important}
+
+.bg-nexus-subtle{background:rgba(10, 38, 71, 0.08)!important}
+.bg-nexus-medium-subtle{background:rgba(20, 66, 114, 0.08)!important}
+.bg-nexus-light-subtle{background:rgba(44, 116, 179, 0.08)!important}
+
+.navbar{
+  background:rgba(255,255,255,0.95)!important;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(10,38,71,0.1);
+  box-shadow:0 2px 20px rgba(10,38,71,0.08);
+}
+
+.hero{
+  background:linear-gradient(135deg, var(--nexus-dark) 0%, var(--nexus-charcoal) 50%, var(--nexus-navy) 100%);
+  padding:6rem 0;
+  color:var(--nexus-white);
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+  z-index:0;
+}
+
+.hero .container{position:relative;z-index:1}
+
+.gradient-text{
+  background-image:linear-gradient(90deg,var(--nexus-gold),var(--nexus-light-blue),var(--nexus-white));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  font-weight:800;
+}
+.icon-wrap{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:1.25rem;margin-bottom:.75rem}
+
+.feature.pro{
+  background:rgba(255,255,255,0.9);
+  border:1px solid rgba(10,38,71,0.1);
+  border-radius:24px;
+  padding:2rem;
+  transition:all 0.3s ease;
+  backdrop-filter:blur(10px);
+  position:relative;
+  overflow:hidden;
+}
+
+.feature.pro::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:linear-gradient(135deg, rgba(10,38,71,0.02) 0%, rgba(44,116,179,0.05) 100%);
+  z-index:0;
+}
+
+.feature.pro > *{position:relative;z-index:1}
+
+.feature.pro:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 20px 60px rgba(10, 38, 71, 0.2);
+  border-color:var(--nexus-light-blue);
+}
+.kpi{display:flex;flex-direction:column;align-items:center}
+.kpi-number{font-size:2.2rem;font-weight:800;color:var(--nexus-navy)}
+.kpi-suffix{font-weight:700;margin-left:.25rem;color:var(--nexus-navy)}
+.kpi p{margin:0;color:var(--muted)}
+.secure-list{background:linear-gradient(180deg,var(--nexus-white) 0%,var(--nexus-light-gray) 100%);border:1px solid var(--nexus-light-gray);border-radius:24px}
+.pricing{
+  background:rgba(255,255,255,0.95);
+  border:1px solid rgba(10,38,71,0.1);
+  border-radius:24px;
+  padding:2.5rem 2rem;
+  transition:all 0.4s ease;
+  backdrop-filter:blur(10px);
+  position:relative;
+  overflow:hidden;
+}
+
+.pricing::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:linear-gradient(135deg, rgba(10,38,71,0.02) 0%, rgba(44,116,179,0.03) 100%);
+  opacity:0;
+  transition:opacity 0.3s ease;
+  z-index:0;
+}
+
+.pricing:hover::before{opacity:1}
+.pricing > *{position:relative;z-index:1}
+
+.pricing:hover{
+  transform:translateY(-15px) scale(1.03);
+  box-shadow:0 25px 80px rgba(10, 38, 71, 0.25);
+  border-color:var(--nexus-light-blue);
+}
+
+.pricing .pricing-head h3{font-weight:800;color:var(--nexus-navy);font-size:2.5rem}
+.pricing li{margin:1rem 0;color:var(--nexus-medium);font-weight:500}
+.pricing li i{color:var(--nexus-light-blue);margin-right:1rem;font-size:1.2rem}
+
+.pricing.featured{
+  border:2px solid var(--nexus-gold);
+  box-shadow:0 20px 80px rgba(255, 215, 0, 0.15);
+  background:linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(255,215,0,0.05) 100%);
+}
+
+.pricing.featured .pricing-head h3{color:var(--nexus-gold)}
+.testimonial{border:1px solid var(--nexus-light-gray)}
+.avatar{width:52px;height:52px;border-radius:50%;object-fit:cover}
+.stars i{color:#FFB020;margin-right:2px}
+.contact.pro{background:linear-gradient(180deg,var(--nexus-white) 0%,var(--nexus-light-gray) 100%);border:1px solid var(--nexus-light-gray)}
+.cta-final{background:linear-gradient(135deg,var(--nexus-navy),var(--nexus-medium),var(--nexus-light-blue))}
+
+/* Nexus Bank Button Styles */
+.btn-nexus{
+  background:linear-gradient(135deg,var(--nexus-navy) 0%,var(--nexus-medium) 50%,var(--nexus-light-blue) 100%);
+  border:0;
+  color:var(--nexus-white);
+  font-weight:600;
+  padding:0.75rem 2rem;
+  border-radius:50px;
+  transition:all 0.3s ease;
+  position:relative;
+  overflow:hidden;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+  box-shadow:0 8px 25px rgba(10,38,71,0.3);
+}
+
+.btn-nexus::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition:left 0.5s;
+}
+
+.btn-nexus:hover::before{left:100%}
+.btn-nexus:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 40px rgba(10,38,71,0.4);
+  color:var(--nexus-white);
+}
+
+.btn-outline-nexus{
+  border:2px solid var(--nexus-navy);
+  color:var(--nexus-navy);
+  background:transparent;
+  font-weight:600;
+  padding:0.75rem 2rem;
+  border-radius:50px;
+  transition:all 0.3s ease;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+}
+
+.btn-outline-nexus:hover{
+  background:var(--nexus-navy);
+  color:var(--nexus-white);
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(10,38,71,0.3);
+}
+
+.btn-nexus-medium{background:var(--nexus-medium);border:0;color:var(--nexus-white)}
+.btn-nexus-medium:hover{background:var(--nexus-navy);color:var(--nexus-white)}
+
+.btn-nexus-light{background:var(--nexus-light-blue);border:0;color:var(--nexus-white)}
+.btn-nexus-light:hover{background:var(--nexus-medium);color:var(--nexus-white)}
+.btn-outline-nexus-light{border:2px solid var(--nexus-light-blue);color:var(--nexus-light-blue)}
+.btn-outline-nexus-light:hover{background:var(--nexus-light-blue);color:var(--nexus-white)}
+
+/* Badge Styles */
+.text-bg-nexus{background:var(--nexus-navy)!important;color:var(--nexus-white)!important}
+.text-bg-nexus-medium{background:var(--nexus-medium)!important;color:var(--nexus-white)!important}
+.text-bg-nexus-light{background:var(--nexus-light-blue)!important;color:var(--nexus-white)!important}
+
+/* Additional Nexus Bank Enhancements */
+.navbar-brand{
+  font-size:1.5rem;
+  font-weight:700;
+}
+
+.nav-link:hover{
+  color:var(--nexus-navy)!important;
+}
+
+.accordion-button:not(.collapsed){
+  background:var(--nexus-light-gray);
+  color:var(--nexus-navy);
+}
+
+.accordion-button:focus{
+  border-color:var(--nexus-navy);
+  box-shadow:0 0 0 0.25rem rgba(10, 38, 71, 0.25);
+}
+
+/* Enhanced shadows and animations */
+.shadow-nexus{
+  box-shadow:0 10px 25px rgba(10, 38, 71, 0.15);
+}
+
+.card:hover, .pricing:hover, .feature.pro:hover{
+  box-shadow:0 20px 40px rgba(10, 38, 71, 0.15);
+}
+
+/* Beautiful gradients */
+.bg-nexus-gradient{
+  background:linear-gradient(135deg, var(--nexus-navy) 0%, var(--nexus-medium) 100%);
+}
+
+/* Improved focus states */
+.form-control:focus{
+  border-color:var(--nexus-navy);
+  box-shadow:0 0 0 0.25rem rgba(10, 38, 71, 0.25);
+}
+
+/* Modern Professional Enhancements */
+.section-dark{
+  background:linear-gradient(135deg, var(--nexus-dark) 0%, var(--nexus-charcoal) 100%);
+  color:var(--nexus-white);
+}
+
+.glass-card{
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:20px;
+  padding:2rem;
+}
+
+.animated-underline{
+  position:relative;
+  display:inline-block;
+}
+
+.animated-underline::after{
+  content:'';
+  position:absolute;
+  bottom:-5px;
+  left:0;
+  width:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--nexus-gold),var(--nexus-light-blue));
+  transition:width 0.3s ease;
+}
+
+.animated-underline:hover::after{width:100%}
+
+.floating-animation{
+  animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0px)}
+  50%{transform:translateY(-20px)}
+}
+
+.pulse-shadow{
+  animation:pulse-shadow 2s infinite;
+}
+
+@keyframes pulse-shadow{
+  0%{box-shadow:0 0 0 0 rgba(44,116,179,0.4)}
+  70%{box-shadow:0 0 0 15px rgba(44,116,179,0)}
+  100%{box-shadow:0 0 0 0 rgba(44,116,179,0)}
+}
+
+/* Professional Navigation */
+.navbar-nav .nav-link{
+  font-weight:500;
+  position:relative;
+  padding:0.5rem 1.5rem!important;
+  transition:all 0.3s ease;
+}
+
+.navbar-nav .nav-link::before{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:50%;
+  width:0;
+  height:2px;
+  background:var(--nexus-navy);
+  transform:translateX(-50%);
+  transition:width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::before{width:80%}
+
+/* KPI Enhanced */
+.kpi{
+  transition:all 0.3s ease;
+  padding:1.5rem;
+  border-radius:15px;
+}
+
+.kpi:hover{
+  background:rgba(10,38,71,0.05);
+  transform:translateY(-5px);
+}
+
+/* Testimonial Enhanced */
+.testimonial{
+  border:none;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(10px);
+  position:relative;
+}
+
+.testimonial::before{
+  content:'"';
+  position:absolute;
+  top:-20px;
+  left:20px;
+  font-size:6rem;
+  color:var(--nexus-light-blue);
+  opacity:0.3;
+  font-family:serif;
+}
+
+/* Gold Accent for Premium Features */
+.premium-accent{
+  position:relative;
+}
+
+.premium-accent::after{
+  content:'PREMIUM';
+  position:absolute;
+  top:-10px;
+  right:-10px;
+  background:linear-gradient(45deg,var(--nexus-gold),#FFA500);
+  color:var(--nexus-dark);
+  padding:0.25rem 0.75rem;
+  border-radius:20px;
+  font-size:0.7rem;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+/* Footer Styles */
+.social-hover:hover {
+  transform: scale(1.1) translateY(-2px);
+  background: var(--nexus-gold) !important;
+  color: var(--nexus-dark) !important;
+  border-color: var(--nexus-gold) !important;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--nexus-gold) !important;
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+
+.footer-legal:hover {
+  color: var(--nexus-light) !important;
+  transition: all 0.3s ease;
+}
+
+.app-download-btn:hover {
+  background: var(--nexus-gold);
+  color: var(--nexus-dark);
+  border-color: var(--nexus-gold);
+  transform: translateY(-2px);
+}
+
+/* CTA Section Enhancements */
+.cta-final {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-final::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23FFD700" opacity="0.1"><polygon points="0,0 1000,0 1000,100"/></svg>');
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Enhanced Pulse Animation */
+.pulse-shadow {
+  animation: enhanced-pulse 3s infinite;
+}
+
+@keyframes enhanced-pulse {
+  0%, 100% { 
+    box-shadow: 0 5px 25px rgba(255, 193, 7, 0.3), 
+                0 0 0 0 rgba(255, 193, 7, 0.7);
+  }
+  50% { 
+    box-shadow: 0 8px 35px rgba(255, 193, 7, 0.5), 
+                0 0 0 10px rgba(255, 193, 7, 0);
+  }
+}
+
+/* Dark Theme Form Elements */
+.section-dark .form-control:focus {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: var(--nexus-gold) !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25) !important;
+  color: white !important;
+}
+
+.section-dark .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.section-dark .accordion-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 0.5rem;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.section-dark .accordion-button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 1.25rem 1.5rem;
+}
+
+.section-dark .accordion-button:not(.collapsed) {
+  background: linear-gradient(45deg, var(--nexus-gold), #FFA500);
+  color: var(--nexus-dark);
+  box-shadow: none;
+}
+
+.section-dark .accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+.section-dark .accordion-button:not(.collapsed)::after {
+  filter: none;
+}
+
+.section-dark .accordion-body {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

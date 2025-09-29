@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nexus Bank - Banco Digital Completo</title>
+  <meta name="description" content="Conta digital, cartões, investimentos, Open Finance e segurança. Abra sua conta grátis em minutos no Nexus Bank.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-3 fw-bold text-nexus animated-underline" href="#">
+      <div class="d-flex align-items-center justify-content-center" style="width:45px;height:45px;background:linear-gradient(135deg,var(--nexus-navy),var(--nexus-light-blue));border-radius:12px;">
+        <i class="bi bi-bank text-white fs-5"></i>
+      </div>
+      Nexus Bank
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#invest">Investimentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#open">Open Finance</a></li>
+        <li class="nav-item"><a class="nav-link" href="#seguranca">Segurança</a></li>
+        <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+        <li class="nav-item ms-lg-3"><a class="btn btn-nexus px-4" href="#cta">Abrir conta</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="glass-card mb-4">
+          <span class="badge text-bg-nexus-light mb-3 pulse-shadow">🚀 Banco Digital Completo</span>
+        </div>
+        <h1 class="fw-bolder display-4 mb-4">O futuro dos bancos digitais: <span class="gradient-text">Tecnologia, segurança e inovação</span> para sua vida financeira.</h1>
+        <p class="lead mb-5" style="color:rgba(255,255,255,0.9);">Descubra o Nexus Bank. Conta digital gratuita, cartão sem anuidade, PIX ilimitado, investimentos inteligentes e cashback exclusivo. Tudo em um só app.</p>
+        <div class="mt-5 d-flex gap-4 flex-wrap">
+          <a href="#planos" class="btn btn-nexus btn-lg px-5">💳 Abrir minha conta</a>
+          <a href="#produtos" class="btn btn-outline-nexus btn-lg px-5" style="border-color:rgba(255,255,255,0.5);color:white;">🔍 Explorar produtos</a>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <div class="floating-animation">
+          <img src="img/banco.png" alt="App Nexus Bank no celular" class="img-fluid rounded-4 shadow-lg" loading="lazy" style="max-width:400px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="py-5" style="background:linear-gradient(135deg,var(--nexus-white) 0%,var(--nexus-light-gray) 100%);">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h5 class="text-nexus fw-bold mb-4">🏆 Parceiros de Confiança</h5>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center align-items-center gap-5">
+      <div class="glass-card p-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" height="35" loading="lazy">
+      </div>
+      <div class="glass-card p-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" height="35" loading="lazy">
+      </div>
+      <div class="glass-card p-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" alt="American Express" height="35" loading="lazy">
+      </div>
+      <div class="glass-card p-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" height="35" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="produtos" class="py-6 section-dark">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="glass-card d-inline-block mb-4">
+        <span class="badge text-bg-nexus-light pulse-shadow">✨ Tudo em um só lugar</span>
+      </div>
+      <h2 class="fw-bolder display-5 mb-4 gradient-text">Conta, cartão, pagamentos e investimentos</h2>
+      <p class="lead" style="color:rgba(255,255,255,0.8);">Organize, pague, invista e acompanhe com simplicidade no Nexus Bank. Tecnologia de ponta para sua vida financeira.</p>
+    </div>
+
+    <ul class="nav nav-pills justify-content-center gap-3" id="prodTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active px-4 py-3" id="tab-conta" data-bs-toggle="pill" data-bs-target="#pane-conta" type="button" role="tab">
+          <i class="bi bi-wallet2 me-2"></i>Conta
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link px-4 py-3" id="tab-cartao" data-bs-toggle="pill" data-bs-target="#pane-cartao" type="button" role="tab">
+          <i class="bi bi-credit-card me-2"></i>Cartão
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link px-4 py-3" id="tab-pag" data-bs-toggle="pill" data-bs-target="#pane-pag" type="button" role="tab">
+          <i class="bi bi-qr-code me-2"></i>Pagamentos
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link px-4 py-3" id="tab-invest" data-bs-toggle="pill" data-bs-target="#pane-invest" type="button" role="tab">
+          <i class="bi bi-graph-up me-2"></i>Investir
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-4">
+      <div class="tab-pane fade show active" id="pane-conta" role="tabpanel">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="feature pro h-100">
+              <div class="icon-wrap bg-nexus-subtle text-nexus mb-4">
+                <i class="bi bi-lightning-charge fs-2"></i>
+              </div>
+              <h4 class="text-nexus fw-bold mb-3">💰 Conta digital gratuita</h4>
+              <p class="mb-4">PIX ilimitado, boletos e recargas. Sem tarifas escondidas no Nexus Bank. Tecnologia de ponta para sua comodidade.</p>
+              <ul class="list-unstyled">
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-light me-3 fs-5"></i>Saldo e extrato em tempo real</li>
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-light me-3 fs-5"></i>Cartão virtual instantâneo</li>
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-light me-3 fs-5"></i>Limites inteligentes</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img class="rounded-4 shadow w-100" src="img/Gemini_Generated_Image_g6fez2g6fez2g6fe.png" alt="Conta digital Nexus" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pane-cartao" role="tabpanel">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="floating-animation">
+              <img class="rounded-4 shadow w-100" src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=1200&auto=format&fit=crop" alt="Cartão Nexus" loading="lazy"/>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="glass-card h-100">
+              <div class="icon-wrap bg-nexus-medium-subtle text-nexus-gold mb-4">
+                <i class="bi bi-credit-card fs-2"></i>
+              </div>
+              <h4 class="text-nexus-gold fw-bold mb-3">💳 Cartão sem anuidade</h4>
+              <p class="mb-4" style="color:rgba(255,255,255,0.8);">Crédito e débito, contactless e cartões adicionais do Nexus Bank. Design premium com tecnologia avançada.</p>
+              <ul class="list-unstyled">
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-gold me-3 fs-5"></i><span style="color:rgba(255,255,255,0.9);">Cashback exclusivo</span></li>
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-gold me-3 fs-5"></i><span style="color:rgba(255,255,255,0.9);">Programa de benefícios</span></li>
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-gold me-3 fs-5"></i><span style="color:rgba(255,255,255,0.9);">Controle por categoria</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pane-pag" role="tabpanel">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="glass-card h-100">
+              <div class="icon-wrap bg-nexus-light-subtle text-nexus-light mb-4">
+                <i class="bi bi-qr-code-scan fs-2"></i>
+              </div>
+              <h4 class="text-nexus-light fw-bold mb-3">⚡ Pagamentos rápidos</h4>
+              <p class="mb-4" style="color:rgba(255,255,255,0.8);">Boletos, QR Code, split e agendamentos no Nexus Bank. Velocidade e segurança em cada transação.</p>
+              <ul class="list-unstyled">
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-light me-3 fs-5"></i><span style="color:rgba(255,255,255,0.9);">PIX com limite dinâmico</span></li>
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-light me-3 fs-5"></i><span style="color:rgba(255,255,255,0.9);">Recorrência e lembretes</span></li>
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-light me-3 fs-5"></i><span style="color:rgba(255,255,255,0.9);">Notas e anexos</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img class="rounded-4 shadow w-100" src="https://www.klooks.com.br/blog/wp-content/uploads/2021/01/Meios-de-pagamento-analise-financeira-fintechs.png" alt="Pagamentos" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pane-invest" role="tabpanel">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <img class="rounded-4 shadow w-100" src="https://img.freepik.com/fotos-premium/crescimento-de-dinheiro-flecha-de-sucesso-negocios-financeiros-no-conceito-de-moeda-investimento-rendimentos-de-fundo-com-lucro-grafico-financiamento-desenvolvimento-ou-aumento-grafico-de-mercado-economico-estrategia-de-moeda-de-acoes-digitais_79161-2472.jpg" alt="Investimentos" loading="lazy"/>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="glass-card h-100">
+              <div class="icon-wrap bg-nexus-subtle text-nexus-gold mb-4">
+                <i class="bi bi-bar-chart fs-2"></i>
+              </div>
+              <h4 class="text-nexus-gold fw-bold mb-3">📈 Investimentos para todos</h4>
+              <p class="mb-4" style="color:rgba(255,255,255,0.8);">CDB, LCI/LCA, fundos e previdência com metas personalizadas no Nexus Bank. Faça seu dinheiro trabalhar por você.</p>
+              <ul class="list-unstyled">
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-gold me-3 fs-5"></i><span style="color:rgba(255,255,255,0.9);">Perfis conservador a arrojado</span></li>
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-gold me-3 fs-5"></i><span style="color:rgba(255,255,255,0.9);">Simulador em tempo real</span></li>
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-gold me-3 fs-5"></i><span style="color:rgba(255,255,255,0.9);">Relatórios claros</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-6 section-dark">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge mb-3 pulse-shadow" style="background:linear-gradient(45deg,var(--nexus-gold),#FFA500);color:var(--nexus-dark);font-weight:bold;">📊 Performance</span>
+      <h3 class="fw-bold mb-3 gradient-text">🏆 Números que Impressionam</h3>
+      <p class="mb-0" style="color:rgba(255,255,255,0.8);">Confiança construída com resultados reais</p>
+    </div>
+    <div class="row text-center g-4">
+      <div class="col-6 col-lg-3">
+        <div class="kpi glass-card p-4">
+          <div class="mb-2">
+            <i class="bi bi-people-fill text-nexus fs-1"></i>
+          </div>
+          <span class="kpi-number" data-target="850">0</span><span class="kpi-suffix">k+</span>
+          <p class="fw-bold">Clientes ativos</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="kpi glass-card p-4">
+          <div class="mb-2">
+            <i class="bi bi-graph-up text-nexus-light fs-1"></i>
+          </div>
+          <span class="kpi-number" data-target="180">0</span><span class="kpi-suffix">M+</span>
+          <p class="fw-bold">Transações/mês</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="kpi glass-card p-4">
+          <div class="mb-2">
+            <i class="bi bi-star-fill text-warning fs-1"></i>
+          </div>
+          <span class="kpi-number" data-target="99">0</span><span class="kpi-suffix">%</span>
+          <p class="fw-bold">Satisfação</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="kpi glass-card p-4">
+          <div class="mb-2">
+            <i class="bi bi-headset text-nexus-medium fs-1"></i>
+          </div>
+          <span class="kpi-number" data-target="24">0</span><span class="kpi-suffix">/7</span>
+          <p class="fw-bold">Atendimento</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="open" class="py-6 section-dark">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="floating-animation">
+          <img class="rounded-4 shadow w-100" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop" alt="Open Finance" loading="lazy" />
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="glass-card p-5">
+          <span class="badge text-bg-nexus-light mb-4 pulse-shadow">🔗 Open Finance</span>
+          <h2 class="fw-bolder gradient-text mb-4">Conecte contas e veja tudo em um só painel</h2>
+          <p class="mb-4 lead" style="color:rgba(255,255,255,0.8);">Importe dados de outros bancos com segurança para ter uma visão 360° da sua vida financeira no Nexus Bank.</p>
+          <ul class="list-unstyled mb-5">
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-light me-3 fs-5"></i><span style="color:rgba(255,255,255,0.9);">Consentimento transparente</span></li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-light me-3 fs-5"></i><span style="color:rgba(255,255,255,0.9);">Revogação a qualquer momento</span></li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-nexus-light me-3 fs-5"></i><span style="color:rgba(255,255,255,0.9);">Recomendações personalizadas</span></li>
+          </ul>
+          <a class="btn btn-nexus btn-lg px-5" href="#cta">🚀 Começar Agora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="seguranca" class="py-6 section-dark">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 order-2 order-lg-1">
+        <div class="glass-card p-5">
+          <span class="badge mb-4 pulse-shadow" style="background:linear-gradient(45deg,var(--nexus-gold),#FFA500);color:var(--nexus-dark);font-weight:bold;">🛡️ Máxima Segurança</span>
+          <h3 class="fw-bolder mb-4 display-6 gradient-text">Segurança em camadas</h3>
+          <p class="mb-5 lead" style="color:rgba(255,255,255,0.8);">Criptografia ponta a ponta, 2FA, token dinâmico e monitoramento antifraude 24/7 no Nexus Bank.</p>
+          <div class="row g-4">
+            <div class="col-sm-6">
+              <div class="glass-card p-3">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-shield-check text-nexus-gold fs-3"></i>
+                  <div>
+                    <div class="fw-bold text-white">🔐 Biometria & 2FA</div>
+                    <small style="color:rgba(255,255,255,0.7);">Autenticação dupla</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="glass-card p-3">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-lock-fill text-nexus-gold fs-3"></i>
+                  <div>
+                    <div class="fw-bold text-white">🛡️ Criptografia AES-256</div>
+                    <small style="color:rgba(255,255,255,0.7);">Padrão militar</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="glass-card p-3">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-eye-fill text-nexus-gold fs-3"></i>
+                  <div>
+                    <div class="fw-bold text-white">🤖 Detecção de fraude</div>
+                    <small style="color:rgba(255,255,255,0.7);">IA avançada</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="glass-card p-3">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-hdd-network text-nexus-gold fs-3"></i>
+                  <div>
+                    <div class="fw-bold text-white">☁️ Backups georredundantes</div>
+                    <small style="color:rgba(255,255,255,0.7);">Sempre protegido</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2">
+        <div class="floating-animation">
+          <img class="rounded-4 shadow w-100" src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200&auto=format&fit=crop" alt="Segurança bancária" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="planos" class="py-6 section-dark">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="glass-card d-inline-block mb-4">
+        <span class="badge text-bg-nexus-light pulse-shadow">💎 Planos Exclusivos</span>
+      </div>
+      <h2 class="fw-bolder display-4 gradient-text mb-4">Planos transparentes</h2>
+      <p class="lead" style="color:rgba(255,255,255,0.8);">Sem letrinhas miúdas, com benefícios reais no Nexus Bank. Escolha o plano ideal para você.</p>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-md-6 col-lg-4">
+        <div class="pricing h-100">
+          <div class="pricing-head"><span class="badge text-bg-nexus">Essencial</span><h3>R$ 0 <small class="text-muted">/mês</small></h3></div>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-check-circle"></i> Conta e cartão sem anuidade</li>
+            <li><i class="bi bi-check-circle"></i> PIX ilimitado</li>
+            <li><i class="bi bi-check-circle"></i> Saques na rede parceira</li>
+          </ul>
+          <a class="btn w-100 btn-outline-nexus" href="#">Começar</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="pricing featured h-100 premium-accent">
+          <div class="pricing-head">
+            <span class="badge" style="background:linear-gradient(45deg,var(--nexus-gold),#FFA500);color:var(--nexus-dark);">⭐ MAIS POPULAR</span>
+            <h3 style="color:var(--nexus-gold);">R$ 19 <small class="text-muted">/mês</small></h3>
+          </div>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-check-circle-fill" style="color:var(--nexus-gold);"></i> Limites inteligentes</li>
+            <li><i class="bi bi-check-circle-fill" style="color:var(--nexus-gold);"></i> Cashback exclusivo</li>
+            <li><i class="bi bi-check-circle-fill" style="color:var(--nexus-gold);"></i> Investimentos com taxas menores</li>
+          </ul>
+          <a class="btn w-100" href="#" style="background:linear-gradient(45deg,var(--nexus-gold),#FFA500);color:var(--nexus-dark);font-weight:bold;">🚀 Assinar Agora</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="pricing h-100">
+          <div class="pricing-head"><span class="badge text-bg-nexus-light">Premium</span><h3>R$ 49 <small class="text-muted">/mês</small></h3></div>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-check-circle"></i> Salas VIP em aeroportos</li>
+            <li><i class="bi bi-check-circle"></i> Seguros compra e viagem</li>
+            <li><i class="bi bi-check-circle"></i> Atendimento prioritário</li>
+          </ul>
+          <a class="btn w-100 btn-outline-nexus-light" href="#">Quero Premium</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-6 section-dark">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge mb-3 pulse-shadow" style="background:linear-gradient(45deg,var(--nexus-gold),#FFA500);color:var(--nexus-dark);font-weight:bold;">⭐ Avaliações</span>
+      <h3 class="fw-bold mb-3 gradient-text">💬 O que nossos clientes dizem</h3>
+      <p class="mb-0" style="color:rgba(255,255,255,0.8);">Experiências reais de quem confia no Nexus Bank</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="glass-card p-5 position-relative">
+          <div class="text-center mb-4">
+            <div class="stars mb-3" aria-label="5 de 5">
+              <i class="bi bi-star-fill text-warning fs-3 me-1"></i>
+              <i class="bi bi-star-fill text-warning fs-3 me-1"></i>
+              <i class="bi bi-star-fill text-warning fs-3 me-1"></i>
+              <i class="bi bi-star-fill text-warning fs-3 me-1"></i>
+              <i class="bi bi-star-fill text-warning fs-3"></i>
+            </div>
+            <div class="text-nexus-gold fw-bold">⭐ 4.9/5 - Avaliação média</div>
+          </div>
+          <blockquote class="text-center mb-4">
+            <p class="lead fst-italic text-white">"Simplicidade e eficiência definem perfeitamente o Nexus Bank. Interface moderna, recursos avançados e atendimento humanizado. Uma experiência bancária superior!"</p>
+          </blockquote>
+          <div class="d-flex align-items-center justify-content-center gap-4 mt-4">
+            <img class="avatar rounded-circle shadow-lg" src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=200&auto=format&fit=crop" alt="Cliente satisfeita" loading="lazy" style="width:80px;height:80px;border:3px solid var(--nexus-gold);"/>
+            <div class="text-center">
+              <strong class="text-nexus-gold fs-4">Marina Santos</strong>
+              <div style="color:rgba(255,255,255,0.8);">CEO & Fundadora • Cliente desde 2022</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="py-6 section-dark">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge mb-3 pulse-shadow" style="background:linear-gradient(45deg,var(--nexus-gold),#FFA500);color:var(--nexus-dark);font-weight:bold;">❓ Suporte</span>
+      <h2 class="fw-bolder display-5 mb-3 gradient-text">Dúvidas frequentes</h2>
+      <p class="lead mb-0" style="color:rgba(255,255,255,0.8);">Encontre respostas rápidas para suas principais questões</p>
+    </div>
+    <div class="row g-5">
+      <div class="col-lg-6">
+        <div class="glass-card p-4">
+          <h4 class="fw-bold text-nexus mb-4">💭 Perguntas mais comuns</h4>
+          <div class="accordion" id="faqAcc">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+                  ❓ Como abrir minha conta no Nexus Bank?
+                </button>
+              </h2>
+              <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  Clique em "Abrir conta", envie seus documentos e conclua em minutos. É 100% digital!
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                  💳 O cartão tem anuidade?
+                </button>
+              </h2>
+              <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  Não! Cartão sem anuidade em todos os planos do Nexus Bank.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                  🔒 Como funciona a segurança?
+                </button>
+              </h2>
+              <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  Utilizamos criptografia de ponta, 2FA, token dinâmico e monitoramento antifraude 24/7.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">
+                  💰 Quais são as taxas do Nexus Bank?
+                </button>
+              </h2>
+              <div id="a4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  Conta sem taxa de manutenção, PIX gratuito ilimitado, TED grátis para clientes Premium.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5" aria-expanded="false" aria-controls="a5">
+                  📱 Como baixar o app?
+                </button>
+              </h2>
+              <div id="a5" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  Disponível na App Store e Google Play. Busque por "Nexus Bank" e baixe gratuitamente.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="glass-card p-5">
+          <div class="text-center mb-4">
+            <div class="mb-3">
+              <i class="bi bi-chat-dots-fill text-nexus-gold fs-1"></i>
+            </div>
+            <h3 class="fw-bolder mb-3 gradient-text">💬 Fale com a gente</h3>
+            <p class="mb-0" style="color:rgba(255,255,255,0.8);">Nossa equipe está pronta para ajudar você 24/7</p>
+          </div>
+          <form class="row g-4" novalidate>
+            <div class="col-md-6">
+              <label class="form-label fw-bold text-white">👤 Nome completo</label>
+              <input type="text" class="form-control form-control-lg" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;" placeholder="Seu nome" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-bold text-white">📧 E-mail</label>
+              <input type="email" class="form-control form-control-lg" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;" placeholder="seu@email.com" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label fw-bold text-white">💬 Mensagem</label>
+              <textarea class="form-control form-control-lg" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;" rows="5" placeholder="Como podemos ajudar você?" required></textarea>
+            </div>
+            <div class="col-12 d-grid">
+              <button class="btn btn-nexus btn-lg" type="submit">
+                <i class="bi bi-send me-2"></i>Enviar Mensagem
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final text-center text-white py-6" id="cta" style="background:linear-gradient(135deg,var(--nexus-dark) 0%,var(--nexus-navy) 50%,var(--nexus-charcoal) 100%);position:relative;">
+  <div class="container position-relative">
+    <div class="glass-card p-5 mx-auto" style="max-width:800px;">
+      <div class="mb-4">
+        <i class="bi bi-rocket-takeoff text-nexus-gold fs-1 mb-3"></i>
+      </div>
+      <h2 class="fw-bolder display-4 mb-4 gradient-text">Sua conta digital começa agora</h2>
+      <p class="lead mb-5" style="color:rgba(255,255,255,0.9);">Transparência, velocidade e design que respeita seu tempo no Nexus Bank. Junte-se a mais de 850.000 clientes satisfeitos.</p>
+      <div class="d-flex justify-content-center gap-4 flex-wrap">
+        <a href="#planos" class="btn btn-lg px-5 py-3" style="background:linear-gradient(45deg,var(--nexus-gold),#FFA500);color:var(--nexus-dark);font-weight:bold;border-radius:50px;">
+          🚀 Abrir minha conta no Nexus Bank
+        </a>
+        <a href="#faq" class="btn btn-outline-light btn-lg px-5 py-3" style="border-radius:50px;border-width:2px;">
+          💬 Falar com especialista
+        </a>
+      </div>
+      <div class="mt-4">
+        <small style="color:rgba(255,255,255,0.7);">✅ Conta gratuita • ✅ Sem anuidade • ✅ PIX ilimitado</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-5 section-dark">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <div class="d-flex align-items-center justify-content-center" style="width:50px;height:50px;background:linear-gradient(135deg,var(--nexus-gold),var(--nexus-light-blue));border-radius:15px;">
+            <i class="bi bi-bank text-dark fs-4"></i>
+          </div>
+          <h4 class="mb-0 gradient-text">Nexus Bank</h4>
+        </div>
+        <p class="mb-4" style="color:rgba(255,255,255,0.8);">O banco digital do futuro. Tecnologia, segurança e inovação para transformar sua vida financeira.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white-50 fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white-50 fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white-50 fs-5"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="text-white-50 fs-5"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h6 class="fw-bold text-white mb-3">Produtos</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Conta Digital</a></li>
+              <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Cartão de Crédito</a></li>
+              <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Investimentos</a></li>
+              <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Empréstimos</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h6 class="fw-bold text-white mb-3">Suporte</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Central de Ajuda</a></li>
+              <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Termos de Uso</a></li>
+              <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Privacidade</a></li>
+              <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr style="border-color:rgba(255,255,255,0.2);" class="my-5">
+    <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
+      <small style="color:rgba(255,255,255,0.7);">© <span id="year"></span> Nexus Bank • Todos os direitos reservados • CNPJ: 00.000.000/0001-00</small>
+      <div class="d-flex gap-4">
+        <small style="color:rgba(255,255,255,0.7);">🔒 Protegido por SSL</small>
+        <small style="color:rgba(255,255,255,0.7);">🛡️ Regulamentado pelo Banco Central</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
